@@ -1,0 +1,13 @@
+flowchart LR
+    subgraph SYSTEM[ACC Content Posting System]
+        R[poster-router]
+        E[events-poster\nPhase 1 / Priority 1]
+        RT[routes-poster\nPhase 2 candidate / Priority 2]
+        M[media-poster\nLater / Priority 3]
+        K[knowledge-poster\nLater / Priority 4]
+    end
+
+    R --> E
+    R --> RT
+    R --> M
+    R --> K

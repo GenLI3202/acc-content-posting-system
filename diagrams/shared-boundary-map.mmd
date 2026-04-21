@@ -1,0 +1,25 @@
+flowchart LR
+    SHREF[shared-references]
+    SHAS[shared-assets]
+
+    ROUTER[poster-router]
+    EVENTS[events-poster]
+    ROUTES[routes-poster]
+    MEDIA[media-poster]
+    KNOWLEDGE[knowledge-poster]
+
+    SHREF --> ROUTER
+    SHREF --> EVENTS
+    SHREF --> ROUTES
+    SHREF --> MEDIA
+    SHREF --> KNOWLEDGE
+
+    SHAS --> EVENTS
+    SHAS --> ROUTES
+    SHAS --> MEDIA
+    SHAS --> KNOWLEDGE
+
+    ROUTER -.no collection schemas/templates.-> EVENTS
+    ROUTER -.no collection schemas/templates.-> ROUTES
+    ROUTER -.no collection schemas/templates.-> MEDIA
+    ROUTER -.no collection schemas/templates.-> KNOWLEDGE

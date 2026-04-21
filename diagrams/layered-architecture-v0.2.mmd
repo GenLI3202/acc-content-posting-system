@@ -1,0 +1,48 @@
+flowchart TB
+    subgraph L1[Layer 1 · Intake Surface]
+        TG[Telegram Group\nrequest + images + links + corrections]
+    end
+
+    subgraph L2[Layer 2 · Routing]
+        ROUTER[poster-router\nthin classification + handoff]
+    end
+
+    subgraph L3[Layer 3 · Collection Posting Skills]
+        EVENTS[events-poster\nPriority 1]
+        ROUTES[routes-poster\nPriority 2]
+        MEDIA[media-poster\nPriority 3]
+        KNOWLEDGE[knowledge-poster\nPriority 4]
+    end
+
+    subgraph L4[Layer 4 · Draft Construction]
+        DRAFT[posting-session / draft object\nfields + assets + status + outputs]
+        LOCAL[local staging output\nmarkdown draft + asset manifest]
+    end
+
+    subgraph L5[Layer 5 · Preview Output]
+        PREVIEW[local preview package\npreview image + draft md + summary]
+        REVIEW[Telegram review surface\ncomments / fixes / approval]
+    end
+
+    subgraph L6[Layer 6 · Publish Output]
+        REPO[ACC repo write\nmarkdown + governed assets]
+        SITE[vessel / website render]
+    end
+
+    TG --> ROUTER
+    ROUTER --> EVENTS
+    ROUTER --> ROUTES
+    ROUTER --> MEDIA
+    ROUTER --> KNOWLEDGE
+
+    EVENTS --> DRAFT
+    ROUTES --> DRAFT
+    MEDIA --> DRAFT
+    KNOWLEDGE --> DRAFT
+
+    DRAFT --> LOCAL
+    LOCAL --> PREVIEW
+    PREVIEW --> REVIEW
+    REVIEW -->|revise| ROUTER
+    REVIEW -->|approve| REPO
+    REPO --> SITE

@@ -1,0 +1,17 @@
+flowchart TD
+    A[Telegram poster request] --> B[poster-router\nClassify as Event Post]
+    B --> C[events-poster\nCollect event fields]
+
+    C --> D[Collect text fields\nTitle / date / location / signup / route / notes]
+    C --> E[Collect assets from Telegram\ncover / wechat-qr / gallery]
+
+    E --> F[Classify assets]
+    F --> G[Name assets by spec]
+    G --> H[Place assets first\nfrontend/public/images/events/slug-name/...]
+
+    D --> I[Generate markdown skeleton]
+    H --> I
+
+    I --> J[Draft review]
+    J --> K[Write multilingual markdown]
+    K --> L[Repo-ready event post]

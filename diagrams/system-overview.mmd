@@ -1,0 +1,14 @@
+flowchart TB
+    TG[Telegram Group\nContent Posting Request] --> ROUTER[poster-router\nThin intake + triage]
+
+    ROUTER -->|event announcement / signup post| EVENTS[events-poster\nPriority 1]
+    ROUTER -->|route / roadbook / route page| ROUTES[routes-poster\nPriority 2]
+    ROUTER -->|recap / promo / media post| MEDIA[media-poster\nPriority 3]
+    ROUTER -->|knowledge / training / nutrition| KNOWLEDGE[knowledge-poster\nPriority 4]
+
+    EVENTS --> REPO[(ACC Repo)]
+    ROUTES --> REPO
+    MEDIA --> REPO
+    KNOWLEDGE --> REPO
+
+    REPO --> SITE[Across CC Site\nVercel Rendered]

@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph INPUTS[Telegram Inputs]
+        T1[Event description]
+        T2[Cover photo]
+        T3[Wechat QR]
+        T4[Gallery photos]
+    end
+
+    subgraph OUTPUTS[events-poster Output Mapping]
+        M1[frontend/src/content/events/zh/slug-name.md]
+        M2[frontend/src/content/events/en/slug-name.md]
+        M3[frontend/src/content/events/de/slug-name.md]
+        A1[frontend/public/images/events/slug-name/cover.jpg]
+        A2[frontend/public/images/events/slug-name/wechat-qr.png]
+        A3[frontend/public/images/events/slug-name/gallery/01-descriptor.jpg]
+    end
+
+    T1 --> M1
+    T1 --> M2
+    T1 --> M3
+    T2 --> A1
+    T3 --> A2
+    T4 --> A3

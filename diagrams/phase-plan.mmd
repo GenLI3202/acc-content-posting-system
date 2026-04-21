@@ -1,0 +1,7 @@
+flowchart LR
+    P1[Phase 1\nposter-router + events-poster] --> P2[Phase 2\nroutes-poster]
+    P2 --> P3[Phase 3\nmedia-poster + knowledge-poster]
+
+    P1 --> S1[Shared refs needed for event publishing]
+    P2 --> S2[Route-specific schemas and templates]
+    P3 --> S3[Editorial and review expansion]

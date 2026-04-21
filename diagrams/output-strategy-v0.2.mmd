@@ -1,0 +1,15 @@
+flowchart LR
+    A[Draft object] --> B[Local markdown draft]
+    A --> C[Local asset staging]
+    B --> D[Preview package]
+    C --> D
+
+    D --> E[Telegram group review]
+    E -->|not approved| F[revise draft]
+    F --> A
+
+    E -->|approved| G[Write repo]
+    G --> H[Website publish path]
+
+    X[Important rule] --> D
+    X[Preview first\nPublish second]
