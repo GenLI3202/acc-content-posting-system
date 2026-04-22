@@ -21,8 +21,8 @@ Publish an ACC afterwork ride event announcement post.
 ### Expected behavior
 The agent should:
 1. recognize this as `events`
-2. announce the 5-step workflow
-3. start with Step 1 only
+2. begin with the minimum useful intake question rather than exposing internal workflow structure
+3. start with event-core questions only
 4. avoid asking Step 2 questions too early
 
 ---
@@ -30,14 +30,18 @@ The agent should:
 ## Step 1 expected conversation shape
 
 ### Agent should say something like
-> 好的。接下来我们需要完成 5 步：
-> 1. Intake & Intent Capture
-> 2. Asset & Source Material Collection
-> 3. Post Plan / Outline Confirmation
-> 4. Full Draft + Preview Package
-> 5. Review / Revise / Publish
->
-> 我们先完成第 1 步。
+> 好，来做这个。先把活动基本信息给我：标题、时间、集合地点。
+
+Or, if the title is already obvious:
+
+> 好。先确认下时间和集合地点。
+
+### Agent should not say things like
+> 我们接下来分 5 步走
+
+> 现在进入 Step 1
+
+> 我会按 workflow 一步步收敛
 
 ### Agent should collect
 - working title
