@@ -1,0 +1,34 @@
+phase: 1
+policy_name: acc-content-scope-policy
+mode: path-sandbox
+
+write:
+  - frontend/src/content/events/**
+  - frontend/public/images/events/**
+
+read:
+  - frontend/src/content.config.ts
+  - docs/content-templates/events.md
+  - docs/agent-posting-spec.md
+  - MAINTENANCE.md
+
+forbid:
+  - backend/**
+  - .github/**
+  - docs/**
+  - frontend/src/content/routes/**
+  - frontend/src/content/media/**
+  - frontend/src/content/knowledge/**
+  - frontend/public/images/routes/**
+  - frontend/public/images/media/**
+  - frontend/public/images/knowledge/**
+  - package.json
+  - package-lock.json
+  - pyproject.toml
+  - requirements.txt
+  - progress.md
+
+notes:
+  - Phase 1 sandbox is intentionally narrower than the eventual system scope.
+  - Writable scope only covers the event-posting surface.
+  - Some files under docs are readable only when explicitly listed in the read section.
