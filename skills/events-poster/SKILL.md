@@ -57,6 +57,41 @@ Phase 1 only covers `Event Post` publishing flow.
 - `assets/templates/event-post-template.md`
 - `assets/templates/event-gallery-section-template.md`
 
+## User interaction protocol
+
+When the request is clearly an `Event Post`, first tell the user the full five-step workflow before collecting detailed information.
+
+Use this structure in plain language:
+
+1. `Intake & Intent Capture`
+2. `Asset & Source Material Collection`
+3. `Post Plan / Outline Confirmation`
+4. `Full Draft + Preview Package`
+5. `Review / Revise / Publish`
+
+Then work strictly step by step.
+
+### Required interaction rules
+
+- first give the user the five-step overview
+- then start Step 1 only
+- do not ask Step 2 questions before Step 1 is sufficiently complete
+- do not move to Step 3 before Step 2 materials are sufficiently collected
+- do not generate the full draft before Step 3 is explicitly confirmed
+- do not publish before Step 5 approval
+
+### Conversation style rule
+
+At the start of each step:
+- state which step the user is in
+- state what information is being collected in this step
+- keep the questioning scoped to the current step
+
+### Transition rule
+
+Only move to the next step after the current step has enough information to proceed.
+If the current step is incomplete, continue collecting inside that step instead of jumping ahead.
+
 ## Operational rule
 
 Preview first. Publish second.

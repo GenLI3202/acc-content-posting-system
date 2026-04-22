@@ -1,0 +1,10 @@
+flowchart TD
+    A[Telegram request classified as Event Post] --> B[Step 1\nIntake & Intent Capture]
+    B --> C[Step 2\nAsset & Source Material Collection]
+    C --> D[Step 3\nPost Plan / Outline Confirmation]
+    D --> E[Step 4\nFull Draft + Preview Package]
+    E --> F[Step 5\nReview / Revise / Publish]
+
+    D -->|plan needs changes| C
+    F -->|needs revision| E
+    F -->|approved| G[Write approved output to ACC repo]
