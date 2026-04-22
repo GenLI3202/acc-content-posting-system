@@ -66,6 +66,18 @@ The agent should:
 - signup/join method
 - supporting notes
 
+### Important signup handling rule
+The agent should not ask for a `registrationLink` as if it were mandatory.
+
+It should first ask how this event is joined, for example:
+- built-in site registration form
+- WeChat QR
+- email signup
+- external registration page
+- no registration needed
+
+Only if the user chooses an external registration page should the agent ask for a `registrationLink`.
+
 ### Example user answers
 - cover: one sunset ride photo
 - QR: one WeChat group QR image

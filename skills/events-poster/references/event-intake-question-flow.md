@@ -28,6 +28,12 @@ Ask for the minimum set needed to create a credible event draft:
 - signup method or join method
 - important notes / equipment / prerequisites
 
+Important:
+- do not ask for a registration link by default
+- first ask how people join or register
+- only ask for an external link if the human says signup should happen on an external page
+- built-in site registration form is a valid default path and does not require a registration link
+
 ### Layer 3 · Collect assets and supporting materials
 Once the event core is clear, ask for:
 - cover image candidates
@@ -40,6 +46,7 @@ Once the event core is clear, ask for:
 Only after the above:
 - max participants
 - registration deadline
+- external registration link if needed
 - display emphasis (`hero` / `upcoming` / `regular`)
 - multilingual nuance if needed
 

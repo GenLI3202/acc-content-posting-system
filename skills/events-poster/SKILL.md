@@ -16,6 +16,7 @@ Create an `Event Post` draft package for ACC.
 - classify and name event assets
 - produce a local markdown draft and preview package
 - wait for review approval before repo publish
+- treat signup as a method question, not automatically as an external link question
 
 ## Read before working
 
@@ -86,6 +87,28 @@ At the start of each step:
 - state which step the user is in
 - state what information is being collected in this step
 - keep the questioning scoped to the current step
+- prefer short Telegram-friendly messages over long multi-screen explanations
+- default to one compact message per turn unless extra detail is necessary
+- avoid repeating workflow context the user already has
+
+### Signup / registration rule
+
+Do not ask for a `registrationLink` by default.
+
+Ask first for the **signup / join method** in plain language, for example:
+- WeChat QR
+- built-in site registration form
+- email signup
+- external registration page
+- no registration needed
+
+Only ask for `registrationLink` if the human explicitly says the event should use an external signup page.
+
+If the event uses a built-in site registration flow, collect only what is actually needed, such as:
+- whether built-in registration should be used
+- `maxParticipants` if relevant
+- `registrationDeadline` if it should override the default
+- `wechatQrCode` if the page should also direct people into a WeChat group
 
 ### Transition rule
 
