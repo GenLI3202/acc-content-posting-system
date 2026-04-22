@@ -26,6 +26,7 @@ Ask for the minimum set needed to create a credible event draft:
 - route or plan summary
 - intensity / who it is for
 - signup method or join method
+- whether there is a participant limit
 - important notes / equipment / prerequisites
 
 Important:
@@ -33,6 +34,7 @@ Important:
 - first ask how people join or register
 - only ask for an external link if the human says signup should happen on an external page
 - built-in site registration form is a valid default path and does not require a registration link
+- for signup-style events, participant cap should be asked early, not forgotten until the very end
 
 ### Layer 3 · Collect assets and supporting materials
 Once the event core is clear, ask for:
@@ -44,7 +46,7 @@ Once the event core is clear, ask for:
 
 ### Layer 4 · Fill enhancement fields
 Only after the above:
-- max participants
+- exact max participants number if not already confirmed
 - registration deadline
 - external registration link if needed
 - display emphasis (`hero` / `upcoming` / `regular`)
