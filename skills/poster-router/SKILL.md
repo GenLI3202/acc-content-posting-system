@@ -1,6 +1,6 @@
 ---
 name: poster-router
-description: Route ACC content posting requests from Telegram into the correct collection-specific posting skill. Use when a user wants to publish club content but the target collection must be classified first, such as events, routes, media recap, or knowledge content. Perform thin intake and handoff only; do not own collection-specific schema filling, asset rules, or markdown generation.
+description: Route ACC content posting requests from Telegram into the correct collection-specific posting skill. Use when a user wants to publish Across Cycling Club content but the target collection must be classified first, such as an event announcement, route page, recap/media post, or knowledge article. Trigger on requests like “发活动帖”, “做报名帖”, “发路线”, “做路书页面”, “整理活动回顾”, or “写训练/营养文章”. Perform thin intake, one-question clarification when necessary, and handoff only; do not own collection-specific schema filling, asset rules, or markdown generation.
 ---
 
 # Poster Router

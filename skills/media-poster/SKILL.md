@@ -1,6 +1,6 @@
 ---
 name: media-poster
-description: Create ACC media and recap posts from conversational input into repo-ready draft packages. Use when publishing post-event recaps, galleries, promo stories, interview-style posts, or other content targeting the media collection. Handles media-specific body structure and asset-heavy publishing workflows.
+description: Create ACC media and recap posts from conversational input into repo-ready draft packages. Use when publishing post-event recaps, galleries, promo stories, interviews, or other content targeting the media collection. Trigger on requests like “整理活动回顾”, “做 recap”, “发图文宣传”, or similar media-post intents. Handles media-specific body structure and asset-heavy publishing workflows.
 ---
 
 # Media Poster

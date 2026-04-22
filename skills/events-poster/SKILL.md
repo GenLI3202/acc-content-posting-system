@@ -1,6 +1,6 @@
 ---
 name: events-poster
-description: Create ACC event announcement posts from Telegram conversations into repo-ready draft packages. Use when publishing an event/signup post for Across Cycling Club, including event frontmatter, body structure, asset classification, local preview generation, and review-before-publish workflow. Supports cover image, WeChat QR, and gallery assets under the ACC event asset rules.
+description: Create ACC event announcement and signup posts from Telegram conversations into repo-ready draft packages. Use when publishing an Across Cycling Club event page such as a social ride, workshop, race, training-camp, club ride announcement, or signup post. Trigger on requests like “发活动帖”, “做报名帖”, “发布周六骑行活动”, “做 workshop event 页面”, or similar event-post intents. Handles event frontmatter, body structure, asset classification, post-plan confirmation, local preview generation, and review-before-publish workflow. Supports cover image, WeChat QR, gallery assets, and event-related route/video links under the ACC event asset rules.
 ---
 
 # Events Poster

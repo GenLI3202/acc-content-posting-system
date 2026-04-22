@@ -1,6 +1,6 @@
 ---
 name: routes-poster
-description: Create ACC route posts and roadbook-style route pages from conversational input into repo-ready draft packages. Use when publishing route collection content such as ride routes, route guides, GPX/Komoot-based route pages, and roadbook-style route descriptions. Handles route-specific schema, body structure, and route asset rules.
+description: Create ACC route posts and roadbook-style route pages from conversational input into repo-ready draft packages. Use when publishing route collection content such as ride routes, route guides, route pages, GPX/Komoot-based route posts, and roadbook-style route descriptions. Trigger on requests like “发路线”, “做路书页面”, “整理 Komoot 路线”, or similar route-post intents. Handles route-specific schema, body structure, and route asset rules.
 ---
 
 # Routes Poster

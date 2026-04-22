@@ -1,6 +1,6 @@
 ---
 name: knowledge-poster
-description: Create ACC knowledge posts from conversational input into repo-ready draft packages. Use when publishing training, nutrition, cycling knowledge, or editorial education content targeting the knowledge collections. Handles article-style structure and preview-before-publish workflow for knowledge content.
+description: Create ACC knowledge posts from conversational input into repo-ready draft packages. Use when publishing training, nutrition, cycling knowledge, or editorial education content targeting the knowledge collections. Trigger on requests like “写训练文章”, “发营养科普”, “做骑行知识帖”, or similar knowledge-post intents. Handles article-style structure, outline confirmation, and preview-before-publish workflow for knowledge content.
 ---
 
 # Knowledge Poster
