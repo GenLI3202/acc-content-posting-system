@@ -7,9 +7,10 @@ author: ACC Club
 date: {date}
 eventType: {eventType}
 cover: /images/events/{slug}/cover.jpg
-displaySection: {displaySection}
+displaySections:
+{display_sections_yaml}
 status: draft
-{optional_wechat_qr}{optional_max_participants}{optional_registration_deadline}
+{optional_recurring_block}{optional_wechat_qr}{optional_max_participants}{optional_registration_deadline}
 ---
 
 {opening_narrative}

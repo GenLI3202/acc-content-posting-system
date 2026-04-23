@@ -24,7 +24,8 @@ Once handed off, `events-poster` owns:
 ## What router should not pre-empt
 
 Router should not try to decide:
-- final `displaySection`
+- final `displaySections`
+- final recurring vs one-off behavior
 - final `eventType`
 - final cover choice
 - final gallery file names

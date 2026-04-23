@@ -29,8 +29,16 @@ core_fields:
   date: 2026-04-18 10:30
   location: 慕尼黑动物园 · Tierparkstraße 30, 81543 München
   eventType: social-ride
-  displaySection: hero
+  displaySections:
+    - hero
+    - upcoming
+  recurrence_mode: one-off
   signup_mode: wechat-group
+
+publish_mapping:
+  frontmatter_display_field: displaySections
+  legacy_displaySection_fallback_allowed: false
+  recurring_block_enabled: false
 
 body_sections:
   opening_narrative: >-
@@ -93,6 +101,31 @@ outputs:
     - frontend/src/content/events/de/2026-acc-season-opening.md
 ```
 
+## Example recurring fragment
+
+```yaml
+core_fields:
+  title: Afterwork Ride
+  date: 2026-04-23 17:30
+  location: 路线起点
+  eventType: social-ride
+  displaySections:
+    - regular
+  recurrence_mode: recurring
+  recurring:
+    frequency: weekly
+    intervalWeeks: 1
+    timezone: Europe/Berlin
+    rolloverTime: "22:00"
+    slugBase: afterwork-ride
+    registrationDeadlineHoursBefore: 19.5
+
+publish_mapping:
+  frontmatter_display_field: displaySections
+  legacy_displaySection_fallback_allowed: false
+  recurring_block_enabled: true
+```
+
 ## Notes
 
 - this object is intentionally richer than frontmatter
@@ -100,3 +133,6 @@ outputs:
 - asset manifest belongs here
 - repo output targets belong here
 - publish should consume this object, not reconstruct everything from chat history
+- `displaySections` should be treated as canonical for current ACC ClubHub output
+- `recurrence_mode` should distinguish `one-off` from real auto-rolling recurring behavior
+- `publish_mapping` exists to prevent silent fallback to legacy frontmatter shapes

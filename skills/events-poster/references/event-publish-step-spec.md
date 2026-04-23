@@ -19,6 +19,7 @@ Before publish, all of the following should be true:
 - preview has already been reviewed in Telegram
 - remote repo state has been refreshed immediately before final repo write
 - target output paths are confirmed to be inside the allowed event-content surface only
+- if the approved draft includes multi-section placement intent or recurring metadata, the final frontmatter mapping is confirmed against current ACC ClubHub schema before final write
 
 ## Publish outputs
 
@@ -62,11 +63,18 @@ python scripts/validate_publish_scope.py \
 
 If the guard returns non-zero, do not write.
 
+Frontmatter mapping rules:
+- emit `displaySections` as the canonical output field
+- do not emit singular `displaySection` in new output unless a repo regression forces temporary fallback
+- emit `recurring` only when the approved draft explicitly requires auto-rolling recurring behavior
+- if the operator only wants the event shown in `regular`, that alone does not justify adding a `recurring` block
+
 ### Step 4 · materialize final publish set
 Prepare the publish set from the approved draft object:
 - multilingual markdown outputs
 - asset files
 - asset references inside markdown
+- canonical frontmatter fields that match current ACC ClubHub authoring expectations
 
 ### Step 5 · write to repo target
 Write the final output set into the ACC repo target paths.

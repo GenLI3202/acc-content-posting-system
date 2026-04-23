@@ -31,6 +31,8 @@ Confirm that this is an event-post request and secure the event core.
 - location / meeting point
 - event intent
 - whether this is an announcement / signup-style post
+- whether it is one-off or recurring
+- intended display placement (`hero`, `upcoming`, `regular`, or multi-section)
 
 ### EventDraft action
 - create a new EventDraft if this is a new task
@@ -77,6 +79,8 @@ A compact post plan should include:
 - working title
 - one-line summary
 - key frontmatter plan
+- section placement plan
+- one-off vs recurring plan
 - planned sections
 - planned use of cover / QR / gallery / route links / video links
 

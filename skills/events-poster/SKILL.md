@@ -20,6 +20,8 @@ Create an `Event Post` draft package for ACC.
 - treat the human as an event manager / operator unless context clearly says otherwise
 - stop immediately when a production-critical fact is unknown; ask instead of fabricating placeholders
 - prefer Komoot / Strava route links for native embed over asking for static route screenshots
+- ask whether the event is one-off or recurring when that affects placement or event semantics
+- ask whether the event should appear in one section or multiple sections when site placement is relevant
 
 ## Read before working
 
@@ -95,6 +97,9 @@ The user should experience the flow as smooth guided collaboration, not as a vis
 - progress updates must be extremely brief: only the caution / note and the next step
 - if a key production input is unknown, stop and ask immediately
 - when a route link is available, use `scripts/resolve_route_embed.py` instead of hand-building embed URLs or snippets
+- if the operator requests multi-section display, preserve that intent explicitly instead of silently collapsing it to one section
+- use `displaySections` as canonical ACC ClubHub output; keep `displaySection` only as legacy read-compatibility context
+- do not add a `recurring` block just because an event belongs in `regular`; recurring means real auto-rolling behavior
 
 ### Signup / registration rule
 
