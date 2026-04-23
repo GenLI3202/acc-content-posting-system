@@ -62,7 +62,20 @@ Rule: whenever a meaningful project change is committed, review this file and up
 - [x] Keep legacy read compatibility for singular `displaySection`
 - [x] Verify ACC ClubHub tests/build after the displaySections fix
 
-## 6. Media-poster design
+## 6. Routes-poster design
+
+- [ ] Decide whether `routes-poster` remains a standalone poster or is partially absorbed into broader knowledge workflows
+- [ ] Review real ACC ClubHub routes schema and runtime behavior
+- [ ] Draft routes-poster top-level architecture
+- [ ] Define route intake workflow
+- [ ] Define route frontmatter schema reference
+- [ ] Define route draft schema example
+- [ ] Define route body structure patterns
+- [ ] Define route publish step spec
+- [ ] Define router-to-routes handoff reference
+- [ ] Define route asset/link handling rules (Komoot / Strava / GPX / cover / gallery)
+
+## 7. Media-poster design
 
 - [x] Decide to build `media-poster` as a dedicated collection-specific poster
 - [x] Draft initial media-poster architecture diagram
@@ -78,7 +91,7 @@ Rule: whenever a meaningful project change is committed, review this file and up
 - [ ] Define router-to-media handoff reference
 - [ ] Define media asset naming/path rules if current shared rules are insufficient
 
-## 7. Knowledge-poster design
+## 8. Knowledge-poster design
 
 - [ ] Decide final split strategy for gear / training / routes / broader knowledge
 - [ ] Draft knowledge-poster top-level architecture
@@ -90,7 +103,7 @@ Rule: whenever a meaningful project change is committed, review this file and up
 - [ ] Define knowledge publish step spec
 - [ ] Define router-to-knowledge handoff reference
 
-## 8. Documentation and maintenance discipline
+## 9. Documentation and maintenance discipline
 
 - [x] Add project-level progress tracker (`PROGRESS.md`)
 - [x] Add project rule to check and update progress after meaningful commits
