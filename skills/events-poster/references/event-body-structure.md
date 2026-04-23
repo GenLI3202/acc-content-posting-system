@@ -18,6 +18,13 @@ Capture the practical event facts in a compact block or table:
 - intensity
 - notes
 
+### 2.5 Route embed section
+When a usable Komoot or Strava link exists, prefer an interactive route embed section after the facts block.
+
+- prefer native Komoot / Strava embed over uploading a static route screenshot
+- keep the plain route link in the facts block
+- use a screenshot only when interactive embed is unavailable
+
 ### 3. Logistics / return section
 Optional but useful when relevant:
 - return options

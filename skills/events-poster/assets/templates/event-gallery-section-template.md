@@ -1,6 +1,6 @@
 ### 活动图片 / Gallery
 
-![gallery-01](/images/events/{slug}/gallery/01-{descriptor_1}.jpg)
-![gallery-02](/images/events/{slug}/gallery/02-{descriptor_2}.jpg)
+{gallery_items_markdown}
 
-> Replace or extend this section according to the actual gallery manifest.
+> 只在确实有 gallery 图片时插入这一整段。
+> 没有 gallery，就不要保留这个 section。

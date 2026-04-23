@@ -48,6 +48,16 @@ links:
   route_link: https://www.komoot.com/...
   registration_link: null
 
+route_embed:
+  provider: komoot
+  route_type: tour
+  canonical_url: https://www.komoot.com/tour/2885696236?share_token=...
+  embed_url: https://www.komoot.com/tour/2885696236/embed?profile=1&share_token=...
+  embed_html: >-
+    <iframe src="https://www.komoot.com/tour/2885696236/embed?profile=1&share_token=..."
+    width="100%" height="700" frameborder="0" scrolling="no"></iframe>
+  notes: []
+
 assets:
   cover:
     source: telegram-upload

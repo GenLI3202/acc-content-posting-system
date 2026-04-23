@@ -15,3 +15,9 @@ Use this file as the local summary index, not as an independent competing spec.
 - prefer `cover`, not `coverImage`
 - do not publish before review approval
 - treat Telegram review as the first review surface
+- Phase 1 event posting write scope is limited to:
+  - `frontend/src/content/events/**`
+  - `frontend/public/images/events/**`
+- do not modify backend, infra, GitHub workflow, or unrelated content collections
+- immediately before final repo write / commit / push, sync remote latest state and stop on conflict or unclear overwrite risk
+- use `scripts/validate_publish_scope.py` to enforce the allowed write surface before final repo write

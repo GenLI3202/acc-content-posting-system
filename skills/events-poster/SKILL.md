@@ -16,7 +16,10 @@ Create an `Event Post` draft package for ACC.
 - classify and name event assets
 - produce a local markdown draft and preview package
 - wait for review approval before repo publish
-- treat signup as a method question, not automatically as an external link question
+- ask signup as a method question, not automatically as an external link question
+- treat the human as an event manager / operator unless context clearly says otherwise
+- stop immediately when a production-critical fact is unknown; ask instead of fabricating placeholders
+- prefer Komoot / Strava route links for native embed over asking for static route screenshots
 
 ## Read before working
 
@@ -29,6 +32,7 @@ Create an `Event Post` draft package for ACC.
 - `references/event-publish-step-spec.md`
 - `references/event-intake-question-flow.md`
 - `references/event-draft-schema-example.md`
+- `references/route-embed-rules.md`
 - `references/events-operational-workflow.md`
 - `references/router-to-events-handoff.md`
 - `../../shared-references/posting-session-schema.md`
@@ -58,6 +62,10 @@ Phase 1 only covers `Event Post` publishing flow.
 - `assets/templates/event-post-template.md`
 - `assets/templates/event-gallery-section-template.md`
 
+## Bundled helper script
+
+- `scripts/resolve_route_embed.py` — normalize Komoot / Strava links into stable embed output
+
 ## User interaction protocol
 
 Internally, follow the five-step event workflow strictly.
@@ -74,26 +82,19 @@ The user should experience the flow as smooth guided collaboration, not as a vis
 - do not generate the full draft before Step 3 is explicitly confirmed
 - do not publish before Step 5 approval
 
-### Conversation style rule
+### User-facing style
 
-For user-facing conversation:
-- keep the questioning scoped to the current need
-- prefer short Telegram-friendly messages over long multi-screen explanations
-- default to one compact message per turn unless extra detail is necessary
-- avoid repeating workflow context the user already has
+- keep questions scoped to the current need
+- prefer one compact Telegram-friendly message over a lecture
+- do not repeat workflow context the user already has
 - do not introduce yourself with long role descriptions unless asked
 - do not announce internal rules like "5-step workflow" or "Step 1"
-- when the user asks to publish an event, acknowledge briefly and move straight into the first needed question
-- do not expose engineering terms like `slug`, `frontmatter`, `repo`, `render`, or `preview package` to normal club users
-- translate system concerns into plain user language such as `活动标题`, `封面图`, `报名方式`, `人数限制`, `活动说明`
-- only use technical terms when talking to a clearly technical collaborator who asks for them
-
-Good example:
-- `好，来做这个。先把活动的基本信息给我：标题、时间、集合地点。`
-
-Bad example:
-- `我是叉叉。接下来我们会按 5-step workflow...`
-- `我们现在进入 Step 1...`
+- when asked to publish an event, acknowledge briefly and move straight to the next needed question
+- use plain user language such as `活动标题`, `封面图`, `报名方式`, `人数限制`, `活动说明`
+- avoid engineering terms like `slug`, `frontmatter`, `repo`, `render`, `preview package` unless the collaborator explicitly wants technical detail
+- progress updates must be extremely brief: only the caution / note and the next step
+- if a key production input is unknown, stop and ask immediately
+- when a route link is available, use `scripts/resolve_route_embed.py` instead of hand-building embed URLs or snippets
 
 ### Signup / registration rule
 
@@ -116,9 +117,6 @@ If the event uses a built-in site registration flow, collect only what is actual
 
 For signup-style event posts, do not forget to ask whether there is a participant limit.
 
-Plain-language example:
-- `这次活动限人数吗？如果限，大概多少人？`
-
 ### Transition rule
 
 Only move to the next step after the current step has enough information to proceed.
@@ -129,3 +127,15 @@ If the current step is incomplete, continue collecting inside that step instead 
 Preview first. Publish second.
 
 Do not write final repo output until the Telegram review gate is explicitly approved.
+
+## Repo boundary rule
+
+Phase 1 is content-scoped. Allowed write surface only:
+- `frontend/src/content/events/**`
+- `frontend/public/images/events/**`
+
+Do not modify other ACC ClubHub areas such as backend, infra, unrelated content collections, CI, or general repo config.
+
+Immediately before final repo write / commit / push, sync the latest remote state and stop if there is a conflict, stale branch, dirty state, or unclear overwrite risk.
+
+Before final repo write, run `scripts/validate_publish_scope.py` on the planned output paths. If it fails, stop and ask the human instead of writing anyway.

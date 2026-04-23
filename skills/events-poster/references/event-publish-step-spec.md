@@ -17,6 +17,8 @@ Before publish, all of the following should be true:
 - planned asset names and paths are stable
 - required event fields are no longer unresolved placeholders
 - preview has already been reviewed in Telegram
+- remote repo state has been refreshed immediately before final repo write
+- target output paths are confirmed to be inside the allowed event-content surface only
 
 ## Publish outputs
 
@@ -37,19 +39,45 @@ A Phase-1 event publish should prepare and write:
 ### Step 1 · freeze approved draft
 Mark the draft as approved and stop changing structural decisions unless a new revision is requested.
 
-### Step 2 · resolve final output paths
+### Step 2 · sync and verify remote repo state
+Immediately before final repo write:
+- fetch / pull the latest remote default branch state
+- verify the local target branch is not stale
+- verify target paths do not conflict with newly-arrived remote changes
+- stop and ask for human intervention if there is a conflict, dirty state, or unclear overwrite risk
+
+Do not skip this sync check just because the draft was prepared locally earlier.
+
+### Step 3 · resolve final output paths
 Ensure all markdown and asset target paths are final.
 
-### Step 3 · materialize final publish set
+Before any final write, run the publish-scope guard against the planned output paths:
+
+```bash
+python scripts/validate_publish_scope.py \
+  --repo-root /path/to/acc_clubhub \
+  --policy specs/content-scope-policy.yaml \
+  <planned-path-1> <planned-path-2> ...
+```
+
+If the guard returns non-zero, do not write.
+
+### Step 4 · materialize final publish set
 Prepare the publish set from the approved draft object:
 - multilingual markdown outputs
 - asset files
 - asset references inside markdown
 
-### Step 4 · write to repo target
+### Step 5 · write to repo target
 Write the final output set into the ACC repo target paths.
 
-### Step 5 · mark published state
+Write is limited to the Phase-1 event content surface only:
+- `frontend/src/content/events/**`
+- `frontend/public/images/events/**`
+
+Do not write outside that surface.
+
+### Step 6 · mark published state
 Update draft/session state to reflect that repo publish has occurred.
 
 ## Important boundary
@@ -71,3 +99,8 @@ If publish fails after approval:
 - allow a safe retry from publish-ready state
 
 Do not force the user to rebuild the draft from scratch.
+
+If the failure comes from sync conflict or path-scope violation:
+- do not force write
+- report the blocking note briefly
+- ask for the next human decision

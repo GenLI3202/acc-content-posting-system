@@ -26,6 +26,10 @@ status: draft
 
 ---
 
+{optional_route_embed_section}
+
+---
+
 ### 返程 / Logistics
 
 {return_text}

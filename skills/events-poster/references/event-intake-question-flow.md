@@ -10,6 +10,12 @@ Collect enough information to produce a real ACC event preview package without o
 
 Ask in layers, not as a giant form dump.
 
+User input beats artificial completeness.
+
+If a production-critical fact is unknown or ambiguous, stop and ask immediately.
+Do not invent placeholder facts just to make the draft look complete.
+An explicit unknown is better than a polished fake.
+
 ### Layer 1 · Establish the event core
 These are the first things to secure:
 - title / what is this ride or event called
@@ -41,8 +47,14 @@ Once the event core is clear, ask for:
 - cover image candidates
 - WeChat QR image if relevant
 - gallery photos if they should appear in preview
-- route links (Komoot / GPX / Strava)
+- route links (prefer Komoot / Strava; GPX if no interactive route page exists)
 - any other media that should be reflected in the draft
+
+Route rule:
+- prefer asking for a Komoot or Strava link before asking for a route screenshot/image
+- when a usable Komoot or Strava route link exists, prefer native route embed in the event page
+- use route screenshots only as fallback when no interactive route link is available
+- normalize route links through `scripts/resolve_route_embed.py` instead of hand-building embed URLs
 
 ### Layer 4 · Fill enhancement fields
 Only after the above:

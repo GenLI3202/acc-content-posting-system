@@ -10,9 +10,8 @@ Telegram is not only an input channel. It is also the first review surface.
 - return preview packages to Telegram before publish
 - use Telegram review as the first human checkpoint
 - do not treat repo write as the first draft preview mechanism
-- optimize for mobile reading: keep routine messages short and scannable
-- prefer one compact message over multi-paragraph lectures
-- only send longer explanations when the user explicitly asks or a decision genuinely needs the extra detail
+- keep routine messages short, scannable, and mobile-friendly
+- only go long when the user explicitly asks or the decision genuinely needs it
 
 ## Preview package recommendation
 
@@ -28,3 +27,5 @@ For normal Telegram turns:
 - keep step reminders compact
 - avoid repeating the full workflow every turn
 - avoid walls of text unless the user is reviewing a draft or specification
+- for progress or production summaries, only send the caution / note and the next step
+- if a key input is missing or uncertain, ask immediately instead of padding with guessed placeholders
