@@ -107,6 +107,7 @@ Rule: whenever a meaningful project change is committed, review this file and up
 
 - [x] Add project-level progress tracker (`PROGRESS.md`)
 - [x] Add project rule to check and update progress after meaningful commits
+- [x] Add shared rule for conservative success claims and frontmatter YAML safety
 - [ ] Review `PROGRESS.md` whenever a new collection skill is added or architecture direction changes
 - [ ] Keep architecture docs in `specs/architecture/` aligned with latest decisions
 

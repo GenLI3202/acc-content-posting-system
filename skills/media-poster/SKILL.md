@@ -35,6 +35,7 @@ Create a `Media Post` draft package for ACC.
 - `../../shared-references/multilingual-output-rules.md`
 - `../../shared-references/telegram-intake-conventions.md`
 - `../../shared-references/source-material-intake-hygiene.md`
+- `../../shared-references/publish-success-and-frontmatter-safety.md`
 
 ## Phase-1 scope
 

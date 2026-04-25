@@ -20,6 +20,7 @@ When collecting screenshots, diagrams, or other source materials, explicitly rem
 ## Read before working
 
 - `../../shared-references/source-material-intake-hygiene.md`
+- `../../shared-references/publish-success-and-frontmatter-safety.md`
 
 ## Not implemented yet
 

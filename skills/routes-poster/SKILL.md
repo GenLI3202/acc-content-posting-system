@@ -24,6 +24,7 @@ Create structured ACC route draft packages aligned with the `routes` collection.
 ## Read before working
 
 - `../../shared-references/source-material-intake-hygiene.md`
+- `../../shared-references/publish-success-and-frontmatter-safety.md`
 
 ## Not implemented yet
 
