@@ -19,6 +19,11 @@ Create structured ACC route draft packages aligned with the `routes` collection.
 - build route draft objects
 - map route outputs into ACC route markdown structure
 - support preview-before-publish workflow
+- explicitly remind the user not to resend the same route map / screenshot / image content multiple times as if it were a new asset
+
+## Read before working
+
+- `../../shared-references/source-material-intake-hygiene.md`
 
 ## Not implemented yet
 

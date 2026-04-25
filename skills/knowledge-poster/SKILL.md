@@ -13,6 +13,14 @@ Planned after `routes-poster` and alongside later editorial expansion.
 
 Create structured ACC knowledge draft packages aligned with the `knowledge` collections.
 
+## Early intake rule
+
+When collecting screenshots, diagrams, or other source materials, explicitly remind the user not to resend the same content multiple times as if it were a new source asset.
+
+## Read before working
+
+- `../../shared-references/source-material-intake-hygiene.md`
+
 ## Not implemented yet
 
 This skill is currently a placeholder skeleton. Do not treat it as production-ready.
