@@ -20,6 +20,7 @@ Before publish, all of the following should be true:
 - remote repo state has been refreshed immediately before final repo write
 - target output paths are confirmed to be inside the allowed media-content surface only
 - the final frontmatter mapping is confirmed against current ACC ClubHub media schema before final write
+- relevant local validation/build checks have been run before any strong success claim is made
 
 ## Publish outputs
 
@@ -73,6 +74,7 @@ Prepare the publish set from the approved draft object:
 - asset files
 - asset references inside markdown
 - canonical frontmatter fields that match current ACC ClubHub authoring expectations
+- YAML-safe quoted strings where frontmatter values could be parsed ambiguously
 
 ### Step 5 · write to repo target
 Write the final output set into the ACC repo target paths.
@@ -85,6 +87,10 @@ Do not write outside that surface.
 
 ### Step 6 · mark published state
 Update draft/session state to reflect that repo publish has occurred.
+
+### Step 7 · report status conservatively
+Report completion using the shared success-claim discipline.
+Do not say the media change is fully done if only local edits or local push are complete but the relevant validation/deployment state is still unknown.
 
 ## Failure handling guidance
 

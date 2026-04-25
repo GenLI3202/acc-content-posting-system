@@ -68,6 +68,7 @@ The user should experience the flow as smooth editorial collaboration, not as a 
 - first identify the source shape and editorial intent
 - do not jump into final body drafting before the page framing is clear
 - do not publish before explicit approval
+- before claiming success, distinguish clearly between local edit done, local validation passed, push completed, and remotely confirmed success
 
 ### User-facing style
 

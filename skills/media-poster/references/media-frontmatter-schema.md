@@ -46,7 +46,8 @@ xiaohongshuUrl: https://www.xiaohongshu.com/...
   - `影像`
   - `访谈`
   - `翻山越岭`
-- some docs still mention `gallery`, but current runtime/schema alignment should be checked before emitting it as new output
+- some docs still mention `gallery`, but the currently inspected runtime/schema path is safer with `video | interview | adventure | group-ride`
+- treat `gallery` as a schema-drift warning, not as a default fresh output choice
 
 ## Authoring rule
 
@@ -54,6 +55,7 @@ For new `media-poster` output:
 - prefer current canonical runtime-supported type values
 - do not emit legacy localized type values unless a repo migration explicitly requires that fallback
 - do not emit `gallery` as a fresh default without confirming current runtime support in the target repo state
+- if the operator wants a gallery-like piece but runtime support is unclear, keep the framing gallery-like in the body plan but confirm the final frontmatter `type` before publish
 
 ## Field intent reminders
 

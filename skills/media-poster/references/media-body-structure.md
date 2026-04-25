@@ -22,6 +22,11 @@ Recommended structure:
 - optional supporting stills / gallery
 - optional closing note
 
+Important runtime note:
+- current ACC media detail pages can already render an embedded video from `videoUrl`
+- do not duplicate the same full video embed again inside the markdown body unless there is a deliberate reason
+- the body should complement the runtime embed, not blindly repeat it
+
 ### 2. Recap-led page
 Use when the main goal is to retell what happened in an event / ride / recap.
 
