@@ -82,13 +82,13 @@ Rule: whenever a meaningful project change is committed, review this file and up
 - [x] Review real ACC ClubHub media schema and runtime behavior
 - [x] Refine media-poster architecture around real media schema
 - [x] Add GitHub-renderable media architecture markdown with Mermaid
-- [ ] Define `media-poster` SKILL.md
-- [ ] Define media intake question flow
-- [ ] Define media frontmatter schema reference
-- [ ] Define media draft schema example
-- [ ] Define media body structure families
-- [ ] Define media publish step spec
-- [ ] Define router-to-media handoff reference
+- [x] Define `media-poster` SKILL.md
+- [x] Define media intake question flow
+- [x] Define media frontmatter schema reference
+- [x] Define media draft schema example
+- [x] Define media body structure families
+- [x] Define media publish step spec
+- [x] Define router-to-media handoff reference
 - [ ] Define media asset naming/path rules if current shared rules are insufficient
 
 ## 8. Knowledge-poster design
@@ -114,11 +114,8 @@ Rule: whenever a meaningful project change is committed, review this file and up
 
 ## Immediate next focus
 
-1. Turn the current media architecture into the first real `media-poster` spec bundle:
-   - `SKILL.md`
-   - intake flow
-   - frontmatter schema
-   - draft schema
-   - body structure
-   - publish spec
+1. Finish the remaining `media-poster` gaps:
+   - check whether media asset naming/path rules need collection-specific additions
+   - decide whether a media markdown template should be added now or after first real usage
+   - run the first real end-to-end media drafting trial
 2. After media stabilizes, design `knowledge-poster` with the same discipline.
