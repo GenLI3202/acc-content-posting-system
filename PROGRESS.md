@@ -116,5 +116,5 @@ Rule: whenever a meaningful project change is committed, review this file and up
 
 1. Finish the remaining `media-poster` gaps:
    - decide whether a media markdown template should be added now or after first real usage
-   - run the first real end-to-end media drafting trial
+   - run the next real end-to-end media drafting trial and check whether the new duplicate-image intake reminder is enough
 2. After media stabilizes, design `knowledge-poster` with the same discipline.

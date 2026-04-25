@@ -66,6 +66,11 @@ Once the media core is clear, ask for:
 - Xiaohongshu or other source/distribution link if relevant
 - supporting notes, captions, recap text, or interview material
 
+When collecting images, explicitly remind the user:
+- do not resend the same image content multiple times just because it is being referenced again
+- if the same image is only being resent for explanation / extraction / emphasis, say that clearly instead of sending it again as if it were a new asset
+- repeated identical images can be mistaken as separate publishable assets later in the workflow
+
 ### Layer 4 · Fill enhancement fields
 Only after the above:
 - tags
@@ -100,7 +105,7 @@ When the user drops a link first, prefer a compact question such as:
 
 When the user drops images first, prefer a compact question such as:
 
-- `这些你想整理成活动回顾，还是偏图集展示？`
+- `这些你想整理成活动回顾，还是偏图集展示？如果有同样内容的图，不要重复发。`
 
 When the user gives recap text first, prefer a compact question such as:
 

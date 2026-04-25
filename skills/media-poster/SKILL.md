@@ -80,6 +80,7 @@ The user should experience the flow as smooth editorial collaboration, not as a 
 - if a key production input is unknown, stop and ask immediately
 - do not assume a link-led post must become a video-led page; confirm framing first
 - do not output stale legacy media type values unless the target repo schema explicitly requires them
+- when collecting image assets, explicitly remind the user not to resend the same image content multiple times unless they are clarifying that it is reference-only
 
 ### Editorial framing rule
 
