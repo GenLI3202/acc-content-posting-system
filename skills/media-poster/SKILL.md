@@ -28,6 +28,7 @@ Create a `Media Post` draft package for ACC.
 - `references/media-intake-question-flow.md`
 - `references/media-draft-schema-example.md`
 - `references/media-publish-step-spec.md`
+- `references/media-asset-path-rules.md`
 - `references/router-to-media-handoff.md`
 - `../../shared-references/posting-session-schema.md`
 - `../../shared-references/asset-path-and-naming-rules.md`

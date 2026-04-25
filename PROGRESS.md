@@ -89,7 +89,7 @@ Rule: whenever a meaningful project change is committed, review this file and up
 - [x] Define media body structure families
 - [x] Define media publish step spec
 - [x] Define router-to-media handoff reference
-- [ ] Define media asset naming/path rules if current shared rules are insufficient
+- [x] Define media asset naming/path rules if current shared rules are insufficient
 
 ## 8. Knowledge-poster design
 
@@ -115,7 +115,6 @@ Rule: whenever a meaningful project change is committed, review this file and up
 ## Immediate next focus
 
 1. Finish the remaining `media-poster` gaps:
-   - check whether media asset naming/path rules need collection-specific additions
    - decide whether a media markdown template should be added now or after first real usage
    - run the first real end-to-end media drafting trial
 2. After media stabilizes, design `knowledge-poster` with the same discipline.

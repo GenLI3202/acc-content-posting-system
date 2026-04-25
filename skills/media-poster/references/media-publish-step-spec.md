@@ -58,6 +58,12 @@ Immediately before final repo write:
 ### Step 3 · resolve final output paths
 Ensure all markdown and asset target paths are final.
 
+Read `media-asset-path-rules.md` and verify the planned outputs follow it exactly.
+In particular:
+- markdown must land under `frontend/src/content/media/**`
+- assets must land under `frontend/public/images/media/**`
+- `src/content/media/**` without the `frontend/` prefix is a blocking path error
+
 If a publish-scope guard exists for media paths, run it before any final write.
 If the guard returns non-zero, do not write.
 
