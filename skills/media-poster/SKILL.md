@@ -54,6 +54,10 @@ Phase 1 covers `Media Post` publishing flow only.
 - `gallery/*`
 - linked external media references
 
+## Read bundled templates
+
+- `assets/templates/media-post-template.md`
+
 ## User interaction protocol
 
 Internally, follow the five-step media workflow strictly.
