@@ -17,10 +17,14 @@ Create structured ACC knowledge draft packages aligned with the `knowledge` coll
 
 When collecting screenshots, diagrams, or other source materials, explicitly remind the user not to resend the same content multiple times as if it were a new source asset.
 
+For knowledge content, author attribution must also be clarified explicitly before the draft is considered publishable.
+Do not silently assume `ACC Club` without asking.
+
 ## Read before working
 
 - `../../shared-references/source-material-intake-hygiene.md`
 - `../../shared-references/publish-success-and-frontmatter-safety.md`
+- `../../shared-references/editorial-author-attribution.md`
 
 ## Not implemented yet
 

@@ -16,6 +16,7 @@ Cross-check against the live ACC repo:
 slug: my-media-post
 title: Post Title
 date: 2026-06-01
+author: ACC Club
 type: group-ride
 cover: /images/media/group-ride/my-media-post/cover.jpg
 status: draft
@@ -25,7 +26,6 @@ status: draft
 
 ```yaml
 description: Short one-line summary shown in cards and meta surfaces
-author: ACC Club
 tags: [season-opening, munich-south]
 featured: false
 videoUrl: https://...

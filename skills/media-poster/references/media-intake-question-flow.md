@@ -41,6 +41,7 @@ These are the first things to secure:
 - the working title or working subject
 - approximate date / time context
 - target media type
+- who the author should be shown as
 - whether the piece should be featured or not
 
 If these are still unclear, do not jump into asset details yet.
@@ -84,6 +85,7 @@ At minimum, secure:
 - title or working title
 - date context
 - target media type
+- author attribution
 - one-line summary
 - primary asset or story anchor
 

@@ -92,6 +92,7 @@ Rule: whenever a meaningful project change is committed, review this file and up
 - [x] Define media asset naming/path rules if current shared rules are insufficient
 - [x] Review and tighten media-poster against real runtime behavior and success-claim discipline
 - [x] Add a first reusable media markdown template
+- [x] Require explicit author attribution clarification for media and knowledge workflows
 
 ## 8. Knowledge-poster design
 
