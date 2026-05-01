@@ -30,9 +30,7 @@ status: draft
 
 ***
 
-## 路线预览
-
-{optional_route_embed_section}
+{optional_route_preview_block}
 
 {optional_activity_explanation_block}
 

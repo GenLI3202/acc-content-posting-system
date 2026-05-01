@@ -29,11 +29,11 @@ core_fields:
   date: 2026-04-18 10:30
   location: 慕尼黑动物园 · Tierparkstraße 30, 81543 München
   eventType: social-ride
+  maxParticipants: 35
   distanceKm: 41.6
   ACCOfficialRide: true
   displaySections:
     - hero
-    - upcoming
   recurrence_mode: one-off
   signup_mode: wechat-group
 
@@ -41,6 +41,8 @@ publish_mapping:
   frontmatter_display_field: displaySections
   legacy_displaySection_fallback_allowed: false
   recurring_block_enabled: false
+
+body_profile: one-off-baseline
 
 body_sections:
   opening_narrative: >-
@@ -50,7 +52,7 @@ body_sections:
   intensity_text: 无均速要求，沿途互相等候
   notes_text: 头盔必戴，公路车或砾石车，自备补给
   bike_type_text: 公路车或砾石车
-  participant_limit_text: 限 30 人
+  participant_limit_text: 限 35 人
   return_text: >-
     可选 S-Bahn 返回，或沿河道骑回市区。
   join_text: >-

@@ -20,6 +20,9 @@ Typical for:
 Reference example:
 - `2026-acc-season-opening`
 
+Use this file mainly as a one-off **body/structure** reference.
+Do not assume its frontmatter is the newest complete metadata set.
+
 Baseline shape can be:
 1. opening narrative
 2. facts block

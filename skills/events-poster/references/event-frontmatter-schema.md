@@ -66,6 +66,10 @@ Treat it as a `recurring official ride` reference profile, not a generic one-off
 For one-off baseline structure, prefer to cross-check against:
 - `2026-acc-season-opening`
 
+Important: older working reference files can validate structure and tone, but may not contain the newest complete field set.
+Do not infer that a field is obsolete merely because an older working example does not include it.
+If current ACC rules require `ACCOfficialRide`, keep it in new output even when older one-off references omit it.
+
 For one-off events such as weekend rides, workshops, or single-date special events:
 - do not emit `recurring` by default
 - do not default `ACCOfficialRide` to true
