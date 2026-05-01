@@ -29,6 +29,8 @@ core_fields:
   date: 2026-04-18 10:30
   location: 慕尼黑动物园 · Tierparkstraße 30, 81543 München
   eventType: social-ride
+  distanceKm: 41.6
+  ACCOfficialRide: true
   displaySections:
     - hero
     - upcoming
@@ -47,6 +49,8 @@ body_sections:
     41.6km，爬升 350m，咖啡骑节奏，无均速门槛。
   intensity_text: 无均速要求，沿途互相等候
   notes_text: 头盔必戴，公路车或砾石车，自备补给
+  bike_type_text: 公路车或砾石车
+  participant_limit_text: 限 30 人
   return_text: >-
     可选 S-Bahn 返回，或沿河道骑回市区。
   join_text: >-
@@ -108,7 +112,9 @@ core_fields:
   title: Afterwork Ride
   date: 2026-04-23 17:30
   location: 路线起点
-  eventType: social-ride
+  eventType: after-work
+  distanceKm: 48.5
+  ACCOfficialRide: true
   displaySections:
     - regular
   recurrence_mode: recurring
@@ -124,6 +130,17 @@ publish_mapping:
   frontmatter_display_field: displaySections
   legacy_displaySection_fallback_allowed: false
   recurring_block_enabled: true
+
+body_profile: recurring-official-ride
+
+## Profile note
+
+Suggested draft/body profiles:
+
+- `one-off-baseline` → default for weekend rides, workshops, single-date events
+- `recurring-official-ride` → for recurring official rides such as after-work series
+
+Do not default all event drafts to the richer recurring profile just because one working file uses it.
 ```
 
 ## Notes
@@ -134,5 +151,7 @@ publish_mapping:
 - repo output targets belong here
 - publish should consume this object, not reconstruct everything from chat history
 - `displaySections` should be treated as canonical for current ACC ClubHub output
+- `distanceKm` should be treated as the canonical route-distance field for new event output
+- `routeDistanceKm` is compatibility context, not the preferred new-write field
 - `recurrence_mode` should distinguish `one-off` from real auto-rolling recurring behavior
 - `publish_mapping` exists to prevent silent fallback to legacy frontmatter shapes

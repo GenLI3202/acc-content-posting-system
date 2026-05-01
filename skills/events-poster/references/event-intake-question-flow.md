@@ -31,17 +31,20 @@ If these are still unclear, do not jump into asset details yet.
 Ask for the minimum set needed to create a credible event draft:
 - short description / what this event is about
 - route or plan summary
+- route distance if this is a ride / route-led event
 - intensity / who it is for
 - whether this is a one-off event or a recurring / regular event
 - signup method or join method
 - whether there is a participant limit
 - important notes / equipment / prerequisites
+- whether this should be marked `ACCOfficialRide` when official-club ride semantics matter
 
 Important:
 - do not ask for a registration link by default
 - first ask how people join or register
 - only ask for an external link if the human says signup should happen on an external page
 - built-in site registration form is a valid default path and does not require a registration link
+- when aligning to the current ACC working event-file pattern, built-in registration may still serialize as `registrationLink: ''` in frontmatter
 - for signup-style events, participant cap should be asked early, not forgotten until the very end
 - do not treat `regular` display and `recurring` behavior as the same thing; confirm both when needed
 
@@ -58,12 +61,15 @@ Route rule:
 - when a usable Komoot or Strava route link exists, prefer native route embed in the event page
 - use route screenshots only as fallback when no interactive route link is available
 - normalize route links through `scripts/resolve_route_embed.py` instead of hand-building embed URLs
+- for new ACC event output, write route distance into `distanceKm`, not `routeDistanceKm`
+- if the event is an official club ride, do not leave route distance unspecified
 
 ### Layer 4 · Fill enhancement fields
 Only after the above:
 - exact max participants number if not already confirmed
 - registration deadline
 - external registration link if needed
+- route distance if it is still missing on a ride / route-led event
 - display emphasis / placement target
   - ask whether the event should appear in `hero`, `upcoming`, `regular`, or multiple sections if the target site supports multi-placement
   - if the human wants multiple placements, capture the full intent instead of silently collapsing it to one value
@@ -77,6 +83,24 @@ Only after the above:
     - `slugBase` when relevant
     - relative registration deadline rule if it should move with each occurrence
 - multilingual nuance if needed
+
+## Profile choice rule
+
+Before drafting the full body, decide which profile fits better:
+
+### one-off-baseline
+Use by default for:
+- weekend rides
+- single-date workshops
+- special one-off events
+
+Use `2026-acc-season-opening` as a practical structure reference for this baseline profile.
+
+### recurring-official-ride
+Use only when the event genuinely behaves like a recurring official club ride.
+
+The current `afterwork-ride-munchen-nord` file is a good reference for this richer profile.
+It must not silently become the default body shape for all events.
 
 ## Preferred compact questions
 

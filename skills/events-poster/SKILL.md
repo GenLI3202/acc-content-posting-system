@@ -1,6 +1,6 @@
 ---
 name: events-poster
-description: Create ACC event announcement and signup posts from Telegram conversations into repo-ready draft packages. Use when publishing an Across Cycling Club event page such as a social ride, workshop, race, training-camp, club ride announcement, or signup post. Trigger on requests like “发活动帖”, “做报名帖”, “发布周六骑行活动”, “做 workshop event 页面”, or similar event-post intents. Handles event frontmatter, body structure, asset classification, post-plan confirmation, local preview generation, and review-before-publish workflow. Supports cover image, WeChat QR, gallery assets, and event-related route/video links under the ACC event asset rules.
+description: Create ACC event announcement and signup posts from Telegram conversations into repo-ready draft packages. Use when publishing an Across Cycling Club event page such as an after-work ride, social ride, workshop, race, training-camp, club ride announcement, or signup post. Trigger on requests like “发活动帖”, “做报名帖”, “发布周六骑行活动”, “做 workshop event 页面”, or similar event-post intents. Handles event frontmatter, distance / official-ride metadata, body structure, asset classification, post-plan confirmation, local preview generation, and review-before-publish workflow. Supports cover image, WeChat QR, gallery assets, and event-related route/video links under the ACC event asset rules.
 ---
 
 # Events Poster
@@ -12,6 +12,7 @@ Create an `Event Post` draft package for ACC.
 ## Responsibilities
 
 - collect event-specific required fields
+- collect route-distance / official-ride metadata when relevant
 - build a structured draft object
 - classify and name event assets
 - produce a local markdown draft and preview package
@@ -22,6 +23,7 @@ Create an `Event Post` draft package for ACC.
 - prefer Komoot / Strava route links for native embed over asking for static route screenshots
 - ask whether the event is one-off or recurring when that affects placement or event semantics
 - ask whether the event should appear in one section or multiple sections when site placement is relevant
+- choose a simpler one-off draft shape by default; only use the richer recurring-official-ride shape when the event truly matches it
 
 ## Read before working
 
@@ -112,6 +114,12 @@ Ask first for the **signup / join method** in plain language, for example:
 - external registration page
 - no registration needed
 
+If the event is a ride / route-based activity, collect route distance explicitly.
+Prefer `distanceKm` as the canonical event frontmatter field.
+Treat `routeDistanceKm` only as legacy / compatibility context unless the ACC repo later redefines it.
+
+If the event is an ACC official ride, treat distance as production-critical metadata rather than a nice-to-have detail.
+
 Only ask for `registrationLink` if the human explicitly says the event should use an external signup page.
 
 If the event uses a built-in site registration flow, collect only what is actually needed, such as:
@@ -119,6 +127,8 @@ If the event uses a built-in site registration flow, collect only what is actual
 - participant cap / max participants if relevant
 - `registrationDeadline` if it should override the default
 - `wechatQrCode` if the page should also direct people into a WeChat group
+- `distanceKm` when the event is a ride / route-led event
+- whether `ACCOfficialRide` should be true when the post is an official club ride
 
 For signup-style event posts, do not forget to ask whether there is a participant limit.
 
